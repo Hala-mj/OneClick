@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Display</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Ensure no scroll bars appear */
+        }
+        #imageContainer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #imageContainer img, #imageContainer video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the media covers the container while maintaining its aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <div id="imageContainer"></div>
+
+    <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const screenName = getQueryParam('name');
+
+            const imageContainer = document.getElementById('imageContainer');
+            const media = JSON.parse(localStorage.getItem(`media-${screenName}`)) || [];
+
+            media.forEach(src => {
+                const mediaElement = src.endsWith('.mp4') ? document.createElement('video') : document.createElement('img');
+                mediaElement.src = src;
+                if (mediaElement.tagName === 'VIDEO') {
+                    mediaElement.controls = true;
+                }
+                imageContainer.appendChild(mediaElement);
+            });
+        });
+
+        window.addEventListener('storage', (event) => {
+            if (event.key.startsWith('media-')) {
+                const screenName = getQueryParam('name');
+                if (event.key === `media-${screenName}`) {
+                    const imageContainer = document.getElementById('imageContainer');
+                    imageContainer.innerHTML = '';
+                    const media = JSON.parse(event.newValue) || [];
+                    media.forEach(src => {
+                        const mediaElement = src.endsWith('.mp4') ? document.createElement('video') : document.createElement('img');
+                        mediaElement.src = src;
+                        if (mediaElement.tagName === 'VIDEO') {
+                            mediaElement.controls = true;
+                        }
+                        imageContainer.appendChild(mediaElement);
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>
