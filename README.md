@@ -49,11 +49,23 @@ The PHP files use XAMPP's default local credentials (`root` with no password).
 
 ## Screenshots
 
-| Main control panel | Screen display | Screens preview |
-|---|---|---|
-| ![Main panel](docs/screenshots/main-panel.png) | ![Screen display](docs/screenshots/screen-display.png) | ![Preview](docs/screenshots/screens-preview.png) |
+UI screenshots from the summer training build (local XAMPP run, training UI only).
 
-Captured from the local XAMPP run (`localhost/OneClick/`) during summer training: media import + screen selection + push, a live `screen.html` display, and the screens preview strip.
+| Login | Welcome / push dashboard |
+|---|---|
+| ![Login](docs/screenshots/login.png) | ![Welcome dashboard](docs/screenshots/welcome-dashboard.png) |
+
+| Menu: Create a user / One Click / Users Data | Create a user / One Click |
+|---|---|
+| ![Menu cards](docs/screenshots/menu-cards.png) | ![Create a user and One Click](docs/screenshots/create-user-oneclick.png) |
+
+| Create a new user | Users Data |
+|---|---|
+| ![Create a new user](docs/screenshots/create-user.png) | ![Users Data](docs/screenshots/users-data.png) |
+
+| Users Data table (mockup) |
+|---|
+| ![Users Data table mockup](docs/screenshots/users-data-table.png) |
 
 ## Documentation
 
