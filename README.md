@@ -46,6 +46,15 @@ The PHP files use XAMPP's default local credentials (`root` with no password).
 | `screen.html` | Full-screen media display for a screen |
 | `*.php` | Backend endpoints |
 
+
+## Screenshots
+
+| Main control panel | Screen display | Screens preview |
+|---|---|---|
+| ![Main panel](docs/screenshots/main-panel.png) | ![Screen display](docs/screenshots/screen-display.png) | ![Preview](docs/screenshots/screens-preview.png) |
+
+Captured from the local XAMPP run (`localhost/OneClick/`) during summer training: media import + screen selection + push, a live `screen.html` display, and the screens preview strip.
+
 ## Documentation
 
 Summer training report (student ID removed): [`docs/Summer_Training_Report.pdf`](docs/Summer_Training_Report.pdf).
