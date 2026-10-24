@@ -4,7 +4,7 @@
 
 ## Overview
 
-OneClick was developed during my summer training at **Medical Fakeeh** (2024). It lets staff register display screens, upload media, and push that content to selected screens with one click, so screens in different locations show the same content at the same time.
+OneClick was developed during summer training at **Medical Fakeeh** (2024) as a team project with other trainees. It lets staff register display screens, upload media, and push that content to selected screens with one click, so screens in different locations show the same content at the same time.
 
 ## Features
 
@@ -46,6 +46,10 @@ The PHP files use XAMPP's default local credentials (`root` with no password).
 | `screen.html` | Full-screen media display for a screen |
 | `*.php` | Backend endpoints |
 
+## Documentation
+
+Summer training report (student ID removed): [`docs/Summer_Training_Report.pdf`](docs/Summer_Training_Report.pdf).
+
 ## Credits
 
-Built by **Hala Jalal** during the Computer Science summer training (Umm Al-Qura University) at Medical Fakeeh, 2024.
+Developed during the Computer Science summer training (Umm Al-Qura University) at Medical Fakeeh, 2024, as part of teamwork with other trainees. **Hala Jalal** contributed as a team member.
